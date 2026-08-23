@@ -4,7 +4,7 @@ export const projects = [
     title: "School Management System",
     description:
       "A full-stack school management platform for managing students, teachers, classes, and academic results.",
-    image: "/projects/school-management-v2.png",
+    image: "/projects/school-management-v25.png",
     technologies: ["Node.js", "Express", "MongoDB", "JWT"],
     github: "#",
     demo: "#",
@@ -25,7 +25,7 @@ export const projects = [
     title: "Grocery Inventory API",
     description:
       "A REST API for managing products, inventory, users, authentication, and store operations.",
-    image: "/projects/vv-grocery-api.png",
+    image: "/projects/vv1-grocery-api.png",
     technologies: ["Node.js", "Express", "Postgresql", "JWT", "REST APIs","Email Notifications", "Cloudinary" ],
     github: "#",
     demo: "#",
