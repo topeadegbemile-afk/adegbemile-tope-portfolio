@@ -29,7 +29,7 @@ export default function Contact() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           {/* Email */}
           <a
-            href="mailto:tope@adegbemile.com"
+            href="mailto:topeadegbemile@gmail.com"
             className="flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 font-semibold transition hover:bg-blue-600"
           >
             <HiOutlineMail className="text-xl" />
