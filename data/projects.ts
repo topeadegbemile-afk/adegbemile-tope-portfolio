@@ -25,7 +25,7 @@ export const projects = [
     title: "Grocery Inventory API",
     description:
       "A REST API for managing products, inventory, users, authentication, and store operations.",
-    image: "/projects/grocery-api.png",
+    image: "/projects/v-grocery-api.png",
     technologies: ["Node.js", "Express", "Postgresql", "JWT", "REST APIs","Email Notifications", "Cloudinary" ],
     github: "#",
     demo: "#",
