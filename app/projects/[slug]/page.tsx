@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 
@@ -9,7 +10,7 @@ export default async function ProjectPage({
 }) {
   const { slug } = await params;
 
-  const project = projects.find((p) => p.slug === slug);
+  const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
     notFound();
@@ -17,59 +18,109 @@ export default async function ProjectPage({
 
   return (
     <main className="min-h-screen bg-[#0B1120] text-white">
-      <section className="mx-auto max-w-5xl px-6 py-24">
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={1200}
-          height={700}
-          className="rounded-3xl border border-white/10"
-        />
+      {/* Back button */}
+      <div className="mx-auto max-w-6xl px-6 pt-8">
+        <Link
+          href="/#projects"
+          className="text-sm text-slate-400 transition hover:text-cyan-400"
+        >
+          ← Back to Projects
+        </Link>
+      </div>
 
-        <h1 className="mt-10 text-5xl font-bold">{project.title}</h1>
+      {/* Hero */}
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <p className="mb-4 text-cyan-400">Featured Project</p>
 
-        <p className="mt-6 text-lg leading-8 text-slate-400">
+        <h1 className="max-w-4xl text-4xl font-bold md:text-6xl">
+          {project.title}
+        </h1>
+
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400">
           {project.description}
         </p>
 
-        <div className="mt-10">
-          <h2 className="text-2xl font-bold">The Challenge</h2>
-          <p className="mt-3 text-slate-400">{project.challenge}</p>
+        {/* Technologies */}
+        <div className="mt-8 flex flex-wrap gap-3">
+          {project.technologies.map((technology) => (
+            <span
+              key={technology}
+              className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
+            >
+              {technology}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* Project Image */}
+      <section className="mx-auto max-w-6xl px-6">
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={1400}
+          height={800}
+          className="w-full rounded-3xl border border-white/10 shadow-2xl"
+        />
+      </section>
+
+      {/* Content */}
+      <section className="mx-auto max-w-4xl px-6 py-20">
+        <div>
+          <p className="mb-3 text-cyan-400">01</p>
+
+          <h2 className="text-3xl font-bold">The Challenge</h2>
+
+          <p className="mt-5 text-lg leading-8 text-slate-400">
+            {project.challenge}
+          </p>
         </div>
 
-        <div className="mt-10">
-          <h2 className="text-2xl font-bold">My Solution</h2>
-          <p className="mt-3 text-slate-400">{project.solution}</p>
+        <div className="mt-16">
+          <p className="mb-3 text-cyan-400">02</p>
+
+          <h2 className="text-3xl font-bold">The Solution</h2>
+
+          <p className="mt-5 text-lg leading-8 text-slate-400">
+            {project.solution}
+          </p>
         </div>
 
-        <div className="mt-10">
-          <h2 className="text-2xl font-bold">Key Features</h2>
+        <div className="mt-16">
+          <p className="mb-3 text-cyan-400">03</p>
 
-          <ul className="mt-4 space-y-3">
+          <h2 className="text-3xl font-bold">Key Features</h2>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
             {project.features.map((feature) => (
-              <li
+              <div
                 key={feature}
-                className="rounded-xl border border-white/10 bg-white/5 p-4 text-slate-300"
+                className="rounded-2xl border border-white/10 bg-white/5 p-5 text-slate-300"
               >
                 {feature}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
 
-        <div className="mt-12 flex gap-4">
+        {/* Buttons */}
+        <div className="mt-16 flex flex-wrap gap-4">
           <a
             href={project.demo}
-            className="rounded-full bg-blue-500 px-6 py-3 font-semibold hover:bg-blue-600"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-blue-500 px-7 py-3 font-semibold transition hover:bg-blue-600"
           >
-            Live Demo
+            Live Demo →
           </a>
 
           <a
             href={project.github}
-            className="rounded-full border border-white/10 px-6 py-3 font-semibold hover:border-cyan-400"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-white/10 px-7 py-3 font-semibold transition hover:border-cyan-400 hover:text-cyan-400"
           >
-            GitHub
+            GitHub →
           </a>
         </div>
       </section>

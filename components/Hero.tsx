@@ -21,13 +21,13 @@ export default function Hero() {
         >
           <p className="mb-4 text-cyan-400">Hello, I'm</p>
 
-          <h1 className="text-5xl font-bold leading-tight md:text-7xl">
-            Adegbemile Tope
-          </h1>
+          <h1 className="whitespace-nowrap text-3xl font-bold sm:text-4xl md:text-7xl">
+  Adegbemile Tope
+</h1>
 
-          <h2 className="mt-5 text-2xl font-semibold text-slate-300">
-            Full-Stack Web Developer & Motion Designer
-          </h2>
+<h2 className="mt-4 text-xl font-semibold leading-relaxed text-slate-300 sm:text-2xl md:text-3xl">
+  Full-Stack Web Developer & Motion Designer
+</h2>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
             I build responsive web applications, backend APIs, and engaging
@@ -42,12 +42,13 @@ export default function Hero() {
               View Projects
             </a>
 
-            <a
-              href="/Adegbemile-Tope-CV.pdf"
-              className="rounded-full border border-white/10 px-6 py-3 font-semibold transition hover:border-cyan-400 hover:text-cyan-400"
-            >
-              Download CV
-            </a>
+           <a
+  href="/Adegbemile-Tope-CV.pdf"
+  download
+  className="rounded-full border border-white/10 px-6 py-3 font-semibold transition hover:border-cyan-400 hover:text-cyan-400"
+>
+  Download CV
+</a>
           </div>
         </motion.div>
 
@@ -61,7 +62,7 @@ export default function Hero() {
 
           <div className="relative h-72 w-72 overflow-hidden rounded-full border border-cyan-400/40 shadow-[0_0_40px_rgba(34,211,238,0.35)]">
             <Image
-              src="/profile/tope.png"
+              src="/profile/tope.d_adegbemile.png"
               alt="Adegbemile Tope"
               fill
               className="object-cover"

@@ -26,7 +26,7 @@ export const projects = [
     description:
       "A REST API for managing products, inventory, users, authentication, and store operations.",
     image: "/projects/grocery-api.png",
-    technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+    technologies: ["Node.js", "Express", "Postgresql", "JWT", "REST APIs","Email Notifications", "Cloudinary" ],
     github: "#",
     demo: "#",
     challenge:
@@ -46,7 +46,7 @@ export const projects = [
     description:
       "A healthcare web application focused on improving digital workflows and user experience.",
     image: "/projects/sterling-health.png",
-    technologies: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
+    technologies: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Email Notifications"],
     github: "#",
     demo: "#",
     challenge:

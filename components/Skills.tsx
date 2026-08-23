@@ -19,6 +19,7 @@ import {
   SiVercel,
   SiVscodium,
   SiPostman,
+  SiPostgresql,
   SiFigma,
 } from "react-icons/si";
 
@@ -43,6 +44,9 @@ const skillGroups = [
       { name: "PHP", icon: SiPhp },
       { name: "MongoDB", icon: SiMongodb },
       { name: "MySQL", icon: SiMysql },
+      { name: "REST APIs", icon: SiExpress },
+      { name: "Authentication", icon: SiExpress },
+      { name: "Postgresql", icon: SiPostgresql },
     ],
   },
   {
