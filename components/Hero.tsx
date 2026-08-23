@@ -43,7 +43,7 @@ export default function Hero() {
             </a>
 
            <a
-  href="/Adegbemile-Tope-CV.pdf"
+  href="/Adegbemile-Tope-CV.docx"
   download
   className="rounded-full border border-white/10 px-6 py-3 font-semibold transition hover:border-cyan-400 hover:text-cyan-400"
 >
